@@ -1,0 +1,11 @@
+<% provide(:title, 'About Us') %>
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>AsocialNet | <%= yield(:title) %></title>
+  </head>
+  <body>
+    <h1>About Us</h1>
+    <p>AsocialNet contributes to link asocial people on the internet. The application is wirtten using the <i>Ruby On Rails</i> framework.</p>
+  </body>
+</html>
