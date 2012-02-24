@@ -1,4 +1,6 @@
 Asocialnet::Application.routes.draw do
+  get "users/new"
+
   get "static_pages/home"
   get "static_pages/help"
   get "static_pages/about"
@@ -10,11 +12,14 @@ Asocialnet::Application.routes.draw do
   # about_path => '/about'
   # about_url  => 'http://localhost:3000/about'
   #
+
   root to: "static_pages#home"
   match "/contact", to: "static_pages#contact"  # named route : contact_path
   match "/home", to: "static_pages#home"
   match "/help", to: "static_pages#help"        # named route : help_path
   match "/about", to: "static_pages#about"      # named route : about_path
+
+  match "/signup", to: "users#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,5 +1,6 @@
 <header class="round">
-  <%= image_tag "marvin.png", alt: "Marvin robot", class: "round" %>
+  <% logo = image_tag "marvin.png", alt: "Marvin robot", class: "round" %>
+  <%= link_to logo, root_path %>
   <nav class="round">
     <ul>
       <li><%= link_to "Home", home_path %></li>
