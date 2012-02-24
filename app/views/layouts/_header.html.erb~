@@ -1,5 +1,11 @@
 <header class="round">
-  <%= image_tag "marvin.png", alt: "Marvin robot", class: "round" %>
+  <div id="app">
+    <h1 id="app_title">Asocial-Net</h1>
+    <h3 id="app_slogan">A network made for asocials</h3>
+  </div>
+
+  <!--<% logo = image_tag "marvin.png", alt: "Marvin robot", class: "round" %>-->
+  <!--<%= link_to logo, root_path %>-->
   <nav class="round">
     <ul>
       <li><%= link_to "Home", home_path %></li>

@@ -22,11 +22,12 @@ class User < ActiveRecord::Base
   # name attribute validation : not blank
   validates :name, presence: true, length: { maximum: 50 }
 
-  # email attribute validation : not blank, unique, and conform to standard
-  # email addresses synthax
+  # email attribute validation : not blank, unique, 50 chars max
+  # and conform to standard email addresses synthax
   valid_email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format: { with: valid_email_regex },
-                    uniqueness: { case_sensitive: false }
+                    uniqueness: { case_sensitive: false },
+                    length: { maximum: 50 }
 
   # password validation : 6 chars minimum, and at least a number and
   # a special character

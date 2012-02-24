@@ -1,5 +1,5 @@
 $full-width: 710px;
-$background-color: #cff;
+$background-color: #7ED9FF;
 $link-color: #09c;
 $visited-link-color: #069;
 
@@ -13,6 +13,24 @@ body {
 
 header {
   padding-top: 20px;
+  height: 97px;
+  background: transparent url('/assets/marvin-64.png') no-repeat scroll 0px 12px;
+
+  div#app {
+    float: left;
+    padding: 0px 0px 0px 77px;
+
+    h1#app_title {
+//      color: #FF7E05;
+      font-weight: bolder;
+//      text-shadow: 4px 6px 12px #CCC;
+    }
+
+    h3#app_slogan {
+      font-style: italic;
+    }
+
+  }
 
   img {
     padding: 1em;
@@ -112,5 +130,76 @@ footer {
 
   nav {
     float: none;
+  }
+}
+
+/* User show page */
+
+table.profile {
+  width: 100%;
+  margin-bottom: 0;
+
+  img.gravatar {
+    border: 1px solid #999;
+    margin-bottom: -15px;
+  }
+}
+
+td.main {
+  width: 70%;
+  padding: 1em;
+}
+
+td.sidebar {
+  width: 30%;
+  padding: 1em;
+  vertical-align: top;
+  background: #ffc;
+}
+
+/* Sign up page */
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+
+  label {
+    color: #fff;
+  }
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
   }
 }

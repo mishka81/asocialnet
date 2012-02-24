@@ -1,0 +1,11 @@
+<% provide :title, @user.name %>
+<table>
+  <tr>
+    <td><%= gravatar_for @user %></td>
+    <td><h2><%= @user.name %></h2></td>
+  </tr>
+  <tr>
+    <td>Email :</td>
+    <td><%= @user.email %></td>
+  </tr>
+</table>
