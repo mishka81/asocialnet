@@ -18,6 +18,9 @@ class User < ActiveRecord::Base
   # to authenticate a user with a given password and assures
   # a crypted version is stored in the database.
   has_secure_password
+  
+  # create a user cookie before storing it in the database
+  before_save :create_remember_token
 
   # name attribute validation : not blank
   validates :name, presence: true, length: { maximum: 50 }
@@ -34,6 +37,14 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, maximum: 12 }
 
   def to_s
-    "[#@id] #@name <#@email>"
+    "[#{@id}] #{@name} <#{@email}>"
   end
+  
+  private
+  
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
+  
+  
 end
