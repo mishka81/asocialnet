@@ -1,0 +1,36 @@
+<% provide :title, "Edit user" %> 
+<h1>Edit user</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<div>
+  <%= gravatar_for(@user) %>
+  <a href="http://gravatar.com/emails">change</a>
+</div>
+
+<%= form_for(@user, method: :delete) do |f| %>
+<div class="actions">
+    <%= f.submit "Delete account", confirm: "Are you sure you want to delete your account ? This action is irreversible. " %>
+  </div>
+<% end %>
