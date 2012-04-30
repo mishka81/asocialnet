@@ -19,6 +19,13 @@ module SessionsHelper
   def signed_in?
     !current_user.nil?
   end
+  
+  def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to login_path, notice: "Please sign in."
+    end
+  end
 
   def sign_out
     cookies.delete(:remember_token)
@@ -32,15 +39,20 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.fullpath
   end
+  
+  def authenticate
+    deny_access unless signed_in?
+  end
 
   private
 
-  def user_from_remember_token
-    remember_token = cookies[:remember_token]
-    User.find_by_remember_token(remember_token) unless remember_token.nil?
-  end
-
-  def clear_return_to
-    session.delete(:return_to)
-  end
+    def user_from_remember_token
+      remember_token = cookies[:remember_token]
+      User.find_by_remember_token(remember_token) unless remember_token.nil?
+    end
+  
+    def clear_return_to
+      session.delete(:return_to)
+    end
+  
 end

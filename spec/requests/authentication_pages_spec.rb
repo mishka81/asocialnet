@@ -64,6 +64,7 @@ describe "Authentication" do
         specify { response.should redirect_to(login_path) }
       end
     end
+   
   end
 
  describe "authorization" do
@@ -95,7 +96,6 @@ describe "Authentication" do
         end
 
         describe "after signing in" do
-
           it "should render the desired protected page" do
             page.should have_selector('title', text: 'Edit user')
           end
@@ -103,9 +103,25 @@ describe "Authentication" do
       end
     
       describe "visiting user index" do
-        before { visit users_path }
-        it { should have_selector('title', text: 'Login') }
+          before { visit users_path }
+          it { should have_selector('title', text: 'Login') }
       end
+        
+      describe "in the Microposts controller" do
+        describe "submitting to the create action" do
+          before { post microposts_path }
+          specify { response.should redirect_to(login_path) }
+        end
+        
+        describe "submitting to the destroy action" do
+          before do
+            micropost = FactoryGirl.create(:micropost)
+            delete micropost_path(micropost)
+          end
+          specify { response.should redirect_to(login_path) }
+        end
+      end
+      
     end
   end
 end

@@ -38,11 +38,19 @@ describe "User pages" do
 
   describe "profile page" do
     let(:user) { FactoryGirl.create(:user) }
-    # Code to make a user variable
+    let!(:m1) { FactoryGirl.create(:micropost, user: user, content: "Foo") }
+    let!(:m2) { FactoryGirl.create(:micropost, user: user, content: "Bar") }
+
     before { visit user_path(user) }
 
     it { should have_selector('h1',    text: user.name) }
     it { should have_selector('title', text: user.name) }
+
+    describe "microposts" do
+      it { should have_content(m1.content) }
+      it { should have_content(m2.content) }
+      it { should have_content(user.microposts.count) }
+    end
   end
 
   describe "signup" do
@@ -85,7 +93,7 @@ describe "User pages" do
     end
 
     describe "with invalid information" do
-      let(:error) { '1 error prohibited this user from being saved' }
+      let(:error) { 'The form contains 1 error' }
       before { click_button "Update" }
 
       it { should have_content(error) }

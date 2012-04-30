@@ -19,6 +19,8 @@ class User < ActiveRecord::Base
   # a crypted version is stored in the database.
   has_secure_password
   
+  has_many :microposts, dependent: :destroy
+  
   # create a user cookie before storing it in the database
   before_save :create_remember_token
 
@@ -40,11 +42,14 @@ class User < ActiveRecord::Base
     "[#{@id}] #{@name} <#{@email}>"
   end
   
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+  
   private
   
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
     end
-  
   
 end
