@@ -125,5 +125,8 @@ fr:
       less_than_x_minutes:
         one:   "moins d'une minute"
         other: "moins de %{count} minutes"
-  
+      x_days:
+        one:   "1 jour"
+        other: "%{count} jours"
+
   
