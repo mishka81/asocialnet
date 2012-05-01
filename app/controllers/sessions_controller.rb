@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_back_or user
     else
       # Create an error message and re-render the signin form.
-      flash.now[:error] = "Could not authenticate user. Please verify your email and password. "
+      flash.now[:error] = t("ctl.session.login_error")
       render "new"
     end
     

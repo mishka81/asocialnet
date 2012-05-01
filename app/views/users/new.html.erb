@@ -1,25 +1,25 @@
-<% provide(:title, "Sign up") %>
-<h1>Sign up</h1>
+<% provide(:title, t("signup.title")) %>
+<h1><%= t("signup.h1") %></h1>
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label t("signup.user_name") %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label t("signup.email") %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label t("signup.pwd") %><br />
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.label t("signup.pwd_cfm"), "Confirmation" %><br />
     <%= f.password_field :password_confirmation, :maxlength => 12, :size => 30 %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit t("signup.signup_btn") %>
   </div>
 <% end %>

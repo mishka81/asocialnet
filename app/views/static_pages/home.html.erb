@@ -3,7 +3,7 @@
   <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="micropost">What's up?</h1>
+        <h1 class="micropost"><%= t :home_logged_in_h1, user_name: @current_user.name %></h1>
         <%= render 'shared/micropost_form' %>
         <%= render 'shared/feed' %>
       </td>
@@ -14,6 +14,6 @@
     </tr>
   </table>
 <% else %>
-	<h1><%= t :home_h1 %></h1>
+	<h1><%= t :home_logged_off_h1 %></h1>
 	<%= link_to t(:signup_btn), signup_path, class: "signup_button round" %>
 <% end %>

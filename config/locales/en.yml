@@ -2,7 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  slogan:         "Welcome to the first Asocial Network"
+  slogan:         "Connecting asocial people"
   
   # menus
   home_link:      "Home"
@@ -15,31 +15,114 @@ en:
   contact_link:   "Contact"
   about_link:     "About"
   
+  # forms
+  form_error_lbl: "error"
+  form_error:     "The form contains %{nb_errors}."
+  
   # page titles
   home_title:     "Home"
   help_title:     "Help"
   users_title:    "Users"
   settings_title: "Settings"
-  profile_title:  "Profile"
+  profiles_title: "Profile"
   logout_title:   "Logout"
   login_title:    "Login"
-  contact_title:  "Contact"
-  about_title:    "About"
+  contact_title:  "Contact us"
+  about_title:    "About us"
   
-  # page static content
+  # static pages content
   about_h1:       "About us"
-  about_txt:      "AsocialNet contributes to link asocial people over the internet"
+  about_txt:      "AsocialNet contributes to link asocial people over the Internet. "
   contact_h1:     "Contact us"
   contact_txt:    ""
   home_h1:        "Hi !"
   home_txt:       ""
   help_h1:        "Help"
-  help_txt:       "we encourage you to see the %{wiki} of the project."
+  help_txt_html:  We encourage you to look at the project <a href="https://forge.humbkr.com/projects/asocialnet/wiki">wiki</a>.
   login_h1:       "Login"
   login_txt:      ""
+  users_h1:       "All users"
+  users_txt:      ""
   
   # home page
-  signup_btn:     "Sign up now !"
+  signup_btn:     "Signup now !"
+  home_logged_off_h1: "Welcome to AsocialNet !"
+  home_logged_in_h1: "Hi %{user_name}, what's up ?"
   
   # login page
   login_btn:      "Login !"
+  signup_ad:      "Not signed yet ? "
+  signup_btn:     "Signup now !"
+  
+  login:
+     title:       "Login"
+     h1:          "Authentication"
+     email:       "Email"
+     pwd:         "Password"
+     login_btn:   "Go geek !"
+  
+  # signup page
+  signup:
+    title:        "Signup"
+    h1:           "New account"
+    user_name:    "Username"
+    email:        "Email"
+    pwd:          "Password"
+    pwd_cfm:      "Repeat password"
+    signup_btn:   "Signup"
+  
+  # user profile page
+  user_edit_btn:       "Edit your account"
+  user_name_lbl:       "Name"
+  user_url_lbl:        "URL"
+  user_posts_lbl:      "Posts"
+  user_followings_lbl: "following"
+  user_followers_lbl:  "follower"
+  user_follow_btn:     "Follow"
+  user_unfollow_btn:   "Unfollow"
+  
+  # user edit profile page
+  user_edit_h1:   "Your account"
+  user_edit_title: "%{user_name} - Account edition"
+  user_email_lbl: "Email"
+  user_pwd_lbl:   "Password"
+  user_pwd_cfm:   "Password confirmation"
+  user_gravatar_lbl: "Gravatar"
+  user_gravatar_chg_btn: "Change"
+  user_delete_btn: "Delete your account"
+  user_maj_btn:    "Update"
+  user_delete_cfm: "Are you sure you want to delete your account ? This action is irreversible."
+  
+  # microposts
+  post_published_lbl:  "Posted"
+  post_delete_btn:     "delete"
+  post_delete_cfm:     "Are you sure you want to delete this post ?"
+  post_form_plh:       "Compose a new post ..."
+  post_create_btn:     "Post"
+  post_created_msg:    "Post created !"
+  post_datetime_ago:   " ago"
+  
+  # controller's messages
+  ctl:
+    session:
+      login_error:  "Login failed. Please verify your credentials. "
+  
+  # willpaginate
+  will_paginate:
+    next_label:     "next"
+    previous_label: "previous"
+    
+  # datetime
+  #datetime:
+   # distance_in_words:
+   #   x_minutes:
+   #     one:   "1 minute"
+    #    other: "%{count} minutes"
+    #  about_x_hours:
+    #    one:   "environ 1 heure"
+    #    other: "environ %{count} heures"
+    #  less_than_x_minutes:
+    #    one:   "moins d'une minute"
+    #    other: "moins de %{count} minutes"
+  
+  

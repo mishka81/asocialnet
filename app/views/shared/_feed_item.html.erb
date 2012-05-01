@@ -8,14 +8,14 @@
     </span>
     <span class="content"><%= feed_item.content %></span>
     <span class="timestamp">
-      Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+      <%= t(:post_published_lbl) %> <%= time_ago_in_words(feed_item.created_at) %><%= t :post_datetime_ago %>. 
     </span>
   </td>
-  <% if current_user?(feed_item.user) %>
-    <td>
-      <%= link_to "delete", feed_item, :method => :delete,
-                                       :confirm => "You sure?",
-                                       :title => feed_item.content %>
-    </td>
-  <% end %>
+  <td>
+    <% if current_user?(feed_item.user) %>
+      <%= link_to t(:post_delete_btn), feed_item, :method => :delete,
+                                     :confirm => t(:post_delete_cfm),
+                                     :title => feed_item.content %>
+    <% end %>
+  </td>
 </tr>

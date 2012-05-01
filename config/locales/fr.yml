@@ -15,6 +15,10 @@ fr:
   contact_link:   "Contactez-nous"
   about_link:     "A-propos"
   
+  # forms
+  form_error_lbl: "erreur"
+  form_error:     "Le formulaire comprend %{nb_errors}."
+  
   # page titles
   home_title:     "Accueil"
   help_title:     "Aide"
@@ -26,16 +30,15 @@ fr:
   contact_title:  "Contactez-nous"
   about_title:    "A-propos"
   
-
-  # page static content
+  # static pages content
   about_h1:       "Qui sommes-nous ?"
-  about_txt:      "AsocialNet favorise l'intégration des asociaux. "
+  about_txt:      "AsocialNet est le premier réseau asocial."
   contact_h1:     "Contactez-nous"
   contact_txt:    ""
   home_h1:        "Salut !"
   home_txt:       ""
   help_h1:        "Aide"
-  help_txt:       "Nous vous invitions à consulter le %{wiki} du projet."
+  help_txt_html:  Nous vous invitons à consulter le <a href="https://forge.humbkr.com/projects/asocialnet/wiki">wiki</a> du projet.
   login_h1:       "Connexion"
   login_txt:      ""
   users_h1:       "Liste des utilisateurs"
@@ -43,9 +46,30 @@ fr:
   
   # home page
   signup_btn:     "Inscris-toi maintenant !"
+  home_logged_off_h1: "Bienvenue sur AsocialNet !"
+  home_logged_in_h1: "Bonjour %{user_name}, quoi de neuf ?"
   
   # login page
   login_btn:      "Se connecter !"
+  signup_ad:      "Pas encore inscrit ? "
+  signup_btn:     "Ouvrir un compte maintenant !"
+  
+  login:
+     title:       "Connexion"
+     h1:          "Identification"
+     email:       "Email"
+     pwd:         "Mot de passe"
+     login_btn:   "C'est parti !"
+  
+  # signup page
+  signup:
+    title:        "Inscription"
+    h1:           "Nouveau compte"
+    user_name:    "Nom d'utilisateur"
+    email:        "Adresse email"
+    pwd:          "Mot de passe"
+    pwd_cfm:      "Répétez le mot de passe"
+    signup_btn:   "Inscription"
   
   # user profile page
   user_edit_btn:       "Editer votre compte"
@@ -70,10 +94,36 @@ fr:
   user_delete_cfm: "Etes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible."
   
   # microposts
-  post_published_lbl:  "Posté le"
+  post_published_lbl:  "Posté il y a"
   post_delete_btn:     "supprimer"
   post_delete_cfm:     "Etes vous sûr de vouloir supprimer ce post ?"
+  post_form_plh:       "Ecrire un nouveau post ..."
+  post_create_btn:     "Poster"
+  post_created_msg:    "Message posté !"
+  post_datetime_ago:   ""
   
-  # stats
+  # controller's messages
+  ctl:
+    session:
+      login_error:  "Connexion impossible. Merci de vérifier votre email et votre mot de passe. "
+  
+  # willpaginate
+  will_paginate:
+    next_label:     "suivant"
+    previous_label: "précédent"
+    
+  # datetime
+  
+  datetime:
+    distance_in_words:
+      x_minutes:
+        one:   "1 minute"
+        other: "%{count} minutes"
+      about_x_hours:
+        one:   "environ 1 heure"
+        other: "environ %{count} heures"
+      less_than_x_minutes:
+        one:   "moins d'une minute"
+        other: "moins de %{count} minutes"
   
   
