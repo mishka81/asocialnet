@@ -1,4 +1,4 @@
-<% provide(:title, 'Home') %>
+<% provide(:title, t(:home_title)) %>
 <% if signed_in? %>
   <table class="front" summary="For signed-in users">
     <tr>
@@ -14,6 +14,6 @@
     </tr>
   </table>
 <% else %>
-	<h1>Hi !</h1>
-	<%= link_to "Sign up now !", signup_path, class: "signup_button round" %>
+	<h1><%= t :home_h1 %></h1>
+	<%= link_to t(:signup_btn), signup_path, class: "signup_button round" %>
 <% end %>

@@ -1,0 +1,79 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+  slogan:         "Le premier réseau asocial"
+  
+  # menus
+  home_link:      "Accueil"
+  help_link:      "Aide"
+  users_link:     "Utilisateurs"
+  settings_link:  "Préférences"
+  profile_link:   "Profil"
+  logout_link:    "Déconnexion"
+  login_link:     "Connexion"
+  contact_link:   "Contactez-nous"
+  about_link:     "A-propos"
+  
+  # page titles
+  home_title:     "Accueil"
+  help_title:     "Aide"
+  users_title:    "Utilisateurs"
+  settings_title: "Préférences"
+  profiles_title: "Profil"
+  logout_title:   "Déconnexion"
+  login_title:    "Connexion"
+  contact_title:  "Contactez-nous"
+  about_title:    "A-propos"
+  
+
+  # page static content
+  about_h1:       "Qui sommes-nous ?"
+  about_txt:      "AsocialNet favorise l'intégration des asociaux. "
+  contact_h1:     "Contactez-nous"
+  contact_txt:    ""
+  home_h1:        "Salut !"
+  home_txt:       ""
+  help_h1:        "Aide"
+  help_txt:       "Nous vous invitions à consulter le %{wiki} du projet."
+  login_h1:       "Connexion"
+  login_txt:      ""
+  users_h1:       "Liste des utilisateurs"
+  users_txt:      ""
+  
+  # home page
+  signup_btn:     "Inscris-toi maintenant !"
+  
+  # login page
+  login_btn:      "Se connecter !"
+  
+  # user profile page
+  user_edit_btn:       "Editer votre compte"
+  user_name_lbl:       "Nom"
+  user_url_lbl:        "URL"
+  user_posts_lbl:      "Posts"
+  user_followings_lbl: "abonnement"
+  user_followers_lbl:  "abonné"
+  user_follow_btn:     "S'abonner"
+  user_unfollow_btn:   "Se désabonner"
+  
+  # user edit profile page
+  user_edit_h1:   "Votre compte"
+  user_edit_title: "%{user_name} - Edition du compte"
+  user_email_lbl: "Courriel"
+  user_pwd_lbl:   "Mot de passe"
+  user_pwd_cfm:   "Confirmation du mot de passe"
+  user_gravatar_lbl: "Gravatar"
+  user_gravatar_chg_btn: "Changer"
+  user_delete_btn: "Supprimer votre compte"
+  user_maj_btn:    "Enregistrer"
+  user_delete_cfm: "Etes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible."
+  
+  # microposts
+  post_published_lbl:  "Posté le"
+  post_delete_btn:     "supprimer"
+  post_delete_cfm:     "Etes vous sûr de vouloir supprimer ce post ?"
+  
+  # stats
+  
+  

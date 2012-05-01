@@ -1,36 +1,25 @@
 Asocialnet::Application.routes.draw do
 
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/about"
-  get "static_pages/contact"
-
-  # Named routes configuration
-  # ex:
-  #
-  # about_path => '/about'
-  # about_url  => 'http://localhost:3000/about'
-  #
-
-  root to: "static_pages#home"
-  match "/contact", to: "static_pages#contact"  # named route : contact_path
-  match "/home", to: "static_pages#home"
-  match "/help", to: "static_pages#help"        # named route : help_path
-  match "/about", to: "static_pages#about"      # named route : about_path
-  match "/signup", to: "users#new"
-  match "/login", to: "sessions#create", via: :post
-  match "/login", to: "sessions#new"
-  match "/logout", to: "sessions#destroy", via: :delete   # DELETE HTTP method
+  scope "(:locale)", :locale => /en|fr/ do
+    root to: "static_pages#home"
+    match "/contact", to: "static_pages#contact"  # named route : contact_path
+    match "/home",    to: "static_pages#home"
+    match "/help",    to: "static_pages#help"        # named route : help_path
+    match "/about",   to: "static_pages#about"      # named route : about_path
+    match "/signup",  to: "users#new"
+    match "/login",   to: "sessions#create", via: :post
+    match "/login",   to: "sessions#new"
+    match "/logout",  to: "sessions#destroy", via: :delete   # DELETE HTTP method
   
-
-  resources :users do
-    member do
-      get :following, :followers
+    resources :users do
+      member do
+        get :following, :followers
+      end
     end
+    resources :sessions, only: [:new, :create, :destroy]
+    resources :microposts, only: [:create, :destroy]
+    resources :relationships, only: [:create, :destroy]
   end
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy]
-  resources :relationships, only: [:create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

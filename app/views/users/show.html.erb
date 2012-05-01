@@ -2,13 +2,12 @@
 <table class="profile">
   <tr>
     <td class="main">
-      <h1>
-        <%= gravatar_for @user, size: 160 %>
+      <h2>
+        <%= gravatar_for @user, size: 140 %>
         <%= @user.name %>
-      </h1>
+      </h2>
       <%= render 'follow_form' if signed_in? %>
       <br />
-      <h3>Microposts</h3>
       <% unless @user.microposts.empty? %>
         <table class="microposts" summary="User microposts">
           <%= render @microposts %>
@@ -17,11 +16,13 @@
       <% end %>
     </td>
     <td class="sidebar round">
-      <strong>Name</strong> <%= @user.name %><br />
-      <strong>URL</strong>  <%= link_to user_path(@user), @user %> <br />
-      <strong>Microposts</strong> <%= @user.microposts.count %>
+      <strong><%= t :user_name_lbl %></strong> <%= @user.name %><br />
+      <strong><%= t :user_url_lbl %></strong>  <%= link_to user_path(@user), @user %> <br />
+      <strong><%= t :user_posts_lbl %></strong> <%= @user.microposts.count %>
       <%= render 'shared/stats' %>
     </td>
   </tr>
 </table>
-<%= button_to "Edit your account", edit_user_path(@user), method: :get %>
+<% if current_user?(@user) %>
+	<%= button_to t(:user_edit_btn), edit_user_path(@user), method: :get %>
+<% end %>

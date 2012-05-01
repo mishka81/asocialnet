@@ -2,4 +2,44 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  slogan:         "Welcome to the first Asocial Network"
+  
+  # menus
+  home_link:      "Home"
+  help_link:      "Help"
+  users_link:     "Users"
+  settings_link:  "Settings"
+  profile_link:   "Profile"
+  logout_link:    "Logout"
+  login_link:     "Login"
+  contact_link:   "Contact"
+  about_link:     "About"
+  
+  # page titles
+  home_title:     "Home"
+  help_title:     "Help"
+  users_title:    "Users"
+  settings_title: "Settings"
+  profile_title:  "Profile"
+  logout_title:   "Logout"
+  login_title:    "Login"
+  contact_title:  "Contact"
+  about_title:    "About"
+  
+  # page static content
+  about_h1:       "About us"
+  about_txt:      "AsocialNet contributes to link asocial people over the internet"
+  contact_h1:     "Contact us"
+  contact_txt:    ""
+  home_h1:        "Hi !"
+  home_txt:       ""
+  help_h1:        "Help"
+  help_txt:       "we encourage you to see the %{wiki} of the project."
+  login_h1:       "Login"
+  login_txt:      ""
+  
+  # home page
+  signup_btn:     "Sign up now !"
+  
+  # login page
+  login_btn:      "Login !"
