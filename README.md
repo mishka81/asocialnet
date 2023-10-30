@@ -1,4 +1,5 @@
-asocialnet
+samplesocialnet
+
 ==========
 
-Asocial network app written with Ruby On Rails
+Sample social network app written with Ruby On Rails
