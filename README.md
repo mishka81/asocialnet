@@ -2,4 +2,4 @@ asocialnet
 
 ==========
 
-Sample social network app written with Ruby On Rails
+This is a sample Ruby On Rails app - a social network made for asocials.
